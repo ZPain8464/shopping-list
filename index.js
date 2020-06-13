@@ -15,6 +15,7 @@
         </div>
       </li>`
         );
+      });
 
         $(".shopping-list").on('click', ".shopping-item-delete", function(event) {
             $(this).closest('li').remove();
@@ -24,7 +25,7 @@
             $(this).closest('li').find(".shopping-item").addClass("shopping-item__checked");
         });
 
-    });
+
 
     
         
