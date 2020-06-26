@@ -17,13 +17,18 @@
         );
       });
 
-        $(".shopping-list").on('click', ".shopping-item-delete", function(event) {
+
+       $(function() {
+         $(".shopping-list").on('click', ".shopping-item-delete", function(event) {
             $(this).closest('li').remove();
-        })
-        
-        $('.shopping-list').on('click', ".shopping-item-toggle", function(event) {
-            $(this).closest('li').find(".shopping-item").addClass("shopping-item__checked");
         });
+       })
+        
+        $(function() {
+          $(document).on('click', '.shopping-item-toggle', function() {
+              $(this).parent().siblings().toggleClass("shopping-item__checked");
+          });
+      })
 
 
 
